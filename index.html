@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      /* Background pattern from Toptal Subtle Patterns */
+      background-image: url("img/texture/random_grey_variations.png");
+      background-repeat: repeat;
+    }
+
+    .texture {
+      /* Background pattern from Toptal Subtle Patterns */
+      background-image: url("img/texture/squared_metal.png");
+    }
+
+    .hazed {
+      background-color: rgb(105, 105, 105, 0.75);
+    }
+
+    .main-text {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Container to hold content-->
+  <div class="container">
+    <!-- Top row-->
+    <div class="row">
+      <div class="col l12 m12 s12">
+        <h1 class="center-align white-text">Hi! I'm Luke!</h1>
+      </div>
+    </div>
+    <div class="row" style="background-color: rgb(105, 105, 105, 0.4);">
+      <div class="col l5 m5 s12">
+        <br>
+        <img class="responsive-img circle z-depth-2" src="img/photo/castle.png">
+      </div>
+      <div class="col l7 m7 s12">
+        <h5 class="grey-text text-lighten-2">Who am I?</h5>
+        <p class="main-text">
+          I'm a Linux Systems Administrator and general technology enthusiast, currently living in the UK.
+        </p>
+        <h5 class="grey-text text-lighten-2">What can I do?</h5>
+        <p class="main-text">
+          I have been working in the tech industry since 2013 and have accumulated a wide range of experience and
+          expertise. </br></br>
+          My skillset includes server and desktop hardware, networking (Including cabling, routing, and switching),
+          virtualization, storage, web hosting, and databases (MySQL).</br>
+          I also have basic development skills, and have some experience with Java, PHP, Python, and MySQL.</br></br>
+          My main area of expertise is in Linux Administration.</br>
+          I am currently learning Google Cloud Platform and various other cloud platforms.
+        </p>
+        <h5 class="grey-text text-lighten-2">What are my hobbies?</h5>
+        <p class="main-text">
+          In my free time I enjoy amateur photography, mainly focusing on landscape and timelapse work. </br>
+          I also enjoy weightlifting and general fitness training. </br></br>
+          Finally, I have a large interest in Japanese culture, ranging from anime to cars. I am currently learning to
+          speak Japanese, hoping to pass my JLPT N5 at the closest opportunity.
+        </p>
+        <h5 class="grey-text text-lighten-2">Find me!</h5>
+        <a class="tooltipped" data-position="left" data-tooltip="GitHub" href="https://github.com/LukeJReid/"><img
+            src="img/icon/gh.png"></a>
+        <a class="tooltipped" data-position="bottom" data-tooltip="LinkedIn"
+          href="www.linkedin.com/in/luke-reid-bb405214b"><img src="img/icon/li.png"></a>
+        <a class="tooltipped" data-position="top" data-tooltip="Messenger" href="http://m.me/LukeJReid01"><img
+            src="img/icon/msg.png"></a>
+        <a class="tooltipped" data-position="bottom" data-tooltip="Instagram"
+          href="https://www.instagram.com/lukejreid/"><img src="img/icon/ig.png"></a>
+        <a class="tooltipped" data-position="right" data-tooltip="YouTube"
+          href="https://www.youtube.com/channel/UC5DeMZMoRCvgqbZJc0e85Ag?view_as=subscriber&ab_channel=LukeR"><img
+            src="img/icon/yt.png"></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col l4 m4 s12">
+        <div onclick="location.href='https://lreid.io/gallery/';" style="cursor: pointer;"
+          class="card texture hoverable z-depth-2">
+          <div class="card-image">
+            <img src="img/photo/sendai.png">
+            <span class="card-title blue-text hazed">Photography</span>
+          </div>
+          <div class="card-content">
+            <p>Take a look at some of my photographic work!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col l4 m4 s12">
+        <div onclick="location.href='https://lreid.io/snippets/';" style="cursor: pointer;"
+          class="card texture hoverable z-depth-2">
+          <div class="card-image">
+            <img src="img/photo/code.png">
+            <span class="card-title blue-text hazed">Code Snippets</span>
+          </div>
+          <div class="card-content">
+            <p>A collection of useful commands and code.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col l4 m4 s12">
+        <div onclick="openModal();" style="cursor: pointer;" class="card texture hoverable z-depth-2">
+          <div class="card-image">
+            <img src="img/photo/travel.png">
+            <span class="card-title blue-text hazed">Travel</span>
+          </div>
+          <div class="card-content">
+            <p>The places I have visited so far!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Structure -->
+  <div id="modal-travel" class="modal">
+    <div class="modal-content">
+      <h4>Travel</h4>
+      <iframe src="https://www.google.com/maps/d/embed?mid=1mtJOqSXmDll_UWgVSKf1-msUUE7l5p-N" width="100%" height="100%"
+        style="min-height: 400px;"></iframe>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn">Close</a>
+    </div>
+  </div>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    function openModal() {
+      var instance = M.Modal.getInstance(document.getElementById("modal-travel"));
+      instance.open();
+    }
+
+    M.AutoInit();        
+  </script>
+</body>
+
+</html>
